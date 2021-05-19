@@ -122,8 +122,7 @@ def station_stats(df):
     print("What is the most commonly used end station?")
     print(most_common_end_station)
 
-    df['Station Combination'] = df['Start Station'].str.cat(df['End Station'], sep=" to ")
-    most_frequent = df['Station Combination'].mode()[0]
+    most_frequent = df.groupby(['colname1','colname2']).sum()
     
     print("What is the most frequent combination of start station and end station?")
     print(most_frequent)
