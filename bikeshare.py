@@ -94,7 +94,6 @@ def time_stats(df):
     print("What is the most common month?")
     print(month)
 
-
     most_common_day = df['day_of_week'].mode()[0]
     print("What is the most common day of the week?")
     print(most_common_day)
@@ -116,7 +115,6 @@ def station_stats(df):
     most_common_start_station = df['Start Station'].mode()[0]
     print("What is the most commonly used start station?")
     print(most_common_start_station)
-
 
     most_common_end_station = df['End Station'].mode()[0]
     print("What is the most commonly used end station?")
@@ -144,7 +142,6 @@ def trip_duration_stats(df):
     average_travel_time = df['Trip Duration'].mean()
     print("What is the average travel time?")
     print(average_travel_time)
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -202,7 +199,6 @@ def show_raw_data(df):
         
         while answer not in answer_options:
             input("Sorry, I didn't catch that. Would you like to view more raw data? Please select either 'yes' or 'no'.\n").lower()
-    
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
